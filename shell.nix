@@ -10,5 +10,6 @@ pkgs.mkShell {
     (rust-bin.nightly.latest.default.override { extensions = [ "rust-src" ]; })
     openssl
     pkg-config
+    cargo-insta
   ];
 }
