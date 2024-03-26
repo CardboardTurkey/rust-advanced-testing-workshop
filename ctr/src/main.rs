@@ -147,11 +147,8 @@ fn run_tests() -> Result<HashMap<String, TestOutcome>, anyhow::Error> {
             .expect("Failed to compile regex")
     });
 
-    let mut command = std::process::Command::new("rustup");
+    let mut command = std::process::Command::new("cargo");
     command
-        .arg("run")
-        .arg("nightly")
-        .arg("cargo")
         .arg("test")
         .arg("--quiet")
         .arg("--no-fail-fast")
